@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nautilo | $Nautilo on Robinhood Chain</title>
+  <meta name="description" content="Introducing Nautilo, the open org harness for everyone. 100% open source. Server. Desktop. Web. Android. iPhone." />
+  <link rel="icon" href="logo.png" type="image/png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <canvas id="fx-canvas" aria-hidden="true"></canvas>
+  <div class="vignette" aria-hidden="true"></div>
+  <div class="scanlines" aria-hidden="true"></div>
+  <div class="cursor-glow" id="cursor-glow" aria-hidden="true"></div>
+
+  <header class="nav">
+    <a class="nav-brand" href="#top">
+      <img src="logo.png" alt="Nautilo logo" class="nav-logo" />
+      <span>
+        <strong>Nautilo</strong>
+        <small>Robinhood Chain</small>
+      </span>
+    </a>
+    <button class="nav-toggle" id="nav-toggle" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="nav-links" id="nav-links">
+      <a href="#about">About</a>
+      <a href="#howtobuy">How to Buy</a>
+      <a href="#join">Join Us</a>
+      <a class="btn btn-ghost" href="https://x.com/Nautilo_rh" target="_blank" rel="noopener noreferrer">X / Twitter</a>
+      <a class="btn btn-neon" href="https://app.uniswap.org/swap?chain=robinhood&inputCurrency=NATIVE&outputCurrency=0xComingSoon" target="_blank" rel="noopener noreferrer">Buy $Nautilo</a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="hero-banner">
+        <img src="banner.png" alt="Nautilo banner on Robinhood Chain" />
+        <div class="hero-banner-fade"></div>
+      </div>
+
+      <div class="hero-inner">
+        <img src="logo.png" alt="Nautilo logo" class="hero-logo" />
+        <p class="eyebrow">Uniswap · Robinhood Chain · Open Source</p>
+        <h1>Nautilo</h1>
+        <p class="ticker-chip">$Nautilo</p>
+        <p class="hero-lead">
+          Introducing Nautilo, the open org harness for everyone. 100% open source. Server. Desktop. Web. Android. iPhone.
+        </p>
+
+        <div class="ca-box">
+          <span class="ca-label">Contract Address</span>
+          <div class="ca-row">
+            <code id="ca-value">0xComingsoon</code>
+            <button type="button" class="btn btn-copy" id="copy-ca">Copy</button>
+          </div>
+        </div>
+
+        <div class="hero-actions">
+          <a class="btn btn-neon btn-lg" href="https://app.uniswap.org/swap?chain=robinhood&inputCurrency=NATIVE&outputCurrency=0xComingSoon" target="_blank" rel="noopener noreferrer">
+            Buy on Uniswap
+          </a>
+          <a class="btn btn-outline btn-lg" href="https://x.com/Nautilo_rh" target="_blank" rel="noopener noreferrer">
+            Follow @Nautilo_rh
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee-track">
+        <span>$Nautilo</span><span>ROBINHOOD CHAIN</span><span>UNISWAP</span><span>OPEN SOURCE</span><span>SERVER</span><span>DESKTOP</span><span>WEB</span><span>ANDROID</span><span>IPHONE</span>
+        <span>$Nautilo</span><span>ROBINHOOD CHAIN</span><span>UNISWAP</span><span>OPEN SOURCE</span><span>SERVER</span><span>DESKTOP</span><span>WEB</span><span>ANDROID</span><span>IPHONE</span>
+      </div>
+    </div>
+
+    <section class="section" id="about">
+      <div class="section-head">
+        <p class="eyebrow">The Mission</p>
+        <h2>About $Nautilo</h2>
+      </div>
+      <div class="about-grid">
+        <article class="glass-card">
+          <h3>Open Org Harness</h3>
+          <p>
+            Nautilo is the open org harness for everyone — a community token on Robinhood Chain built around transparency, access, and tools that anyone can run.
+          </p>
+        </article>
+        <article class="glass-card">
+          <h3>100% Open Source</h3>
+          <p>
+            Server. Desktop. Web. Android. iPhone. The stack is open end to end so builders, operators, and communities can fork, ship, and own their own org layer.
+          </p>
+        </article>
+        <article class="glass-card">
+          <h3>Robinhood × Uniswap</h3>
+          <p>
+            $Nautilo trades on Uniswap on Robinhood Chain. Fast EVM rails, native ETH gas, and a clean swap path for anyone ready to enter the spiral.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section section-alt" id="howtobuy">
+      <div class="section-head">
+        <p class="eyebrow">Get In</p>
+        <h2>How to Buy</h2>
+        <p class="section-lead">Four steps to pick up $Nautilo on Uniswap.</p>
+      </div>
+      <ol class="steps">
+        <li class="step glass-card">
+          <span class="step-num">01</span>
+          <h3>Get a wallet</h3>
+          <p>Use a wallet that can connect to EVM networks — MetaMask, Rabby, or Robinhood Wallet.</p>
+        </li>
+        <li class="step glass-card">
+          <span class="step-num">02</span>
+          <h3>Open Robinhood Chain</h3>
+          <p>Connect to Robinhood Chain. Uniswap already lists the network, so you can route the swap there in one move.</p>
+        </li>
+        <li class="step glass-card">
+          <span class="step-num">03</span>
+          <h3>Load ETH for gas</h3>
+          <p>Robinhood Chain uses ETH for fees. Bridge or send a little ETH so your swap can confirm.</p>
+        </li>
+        <li class="step glass-card">
+          <span class="step-num">04</span>
+          <h3>Swap on Uniswap</h3>
+          <p>Hit Buy, pick native ETH in, $Nautilo out, and confirm. Contract shows as <code>0xComingsoon</code> until launch locks in.</p>
+        </li>
+      </ol>
+      <div class="center-cta">
+        <a class="btn btn-neon btn-lg" href="https://app.uniswap.org/swap?chain=robinhood&inputCurrency=NATIVE&outputCurrency=0xComingSoon" target="_blank" rel="noopener noreferrer">
+          Buy $Nautilo Now
+        </a>
+      </div>
+    </section>
+
+    <section class="section" id="join">
+      <div class="join-panel">
+        <img src="logo.png" alt="" class="join-logo" />
+        <p class="eyebrow">The Crew</p>
+        <h2>Join Us</h2>
+        <p>
+          The official signal lives on X. Follow <a href="https://x.com/Nautilo_rh" target="_blank" rel="noopener noreferrer">@Nautilo_rh</a>, share the launch, and be there when the contract flips from coming soon to live.
+        </p>
+        <div class="hero-actions">
+          <a class="btn btn-neon btn-lg" href="https://x.com/Nautilo_rh" target="_blank" rel="noopener noreferrer">Join on X</a>
+          <a class="btn btn-outline btn-lg" href="https://app.uniswap.org/swap?chain=robinhood&inputCurrency=NATIVE&outputCurrency=0xComingSoon" target="_blank" rel="noopener noreferrer">Buy on Uniswap</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-brand">
+      <img src="logo.png" alt="" />
+      <div>
+        <strong>Nautilo</strong>
+        <span>$Nautilo · Robinhood Chain · Uniswap</span>
+      </div>
+    </div>
+    <p class="disclaimer">
+      $Nautilo is a community token. This site is not affiliated with, endorsed by, or sponsored by Robinhood Markets, Robinhood Chain, or Uniswap. Crypto is volatile. Do your own research. Contract: 0xComingsoon.
+    </p>
+  </footer>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="script.js"></script>
+</body>
+</html>
